@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/jpg" href="img/icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="eel.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Staff hours</title>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="#" class="first__link">Таблица</a></li>
+                    <li><a href="index2.html" class="second__link">Excel</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Таблица с персоналом</h2>
+
+            <div class="db__table">
+                <textarea id="db" cols="87" rows="26" readonly></textarea>
+                <script>check_db()</script>
+                <div id="no_db"></div>
+                <form action="" class="db__table__form">
+                    <button onclick="fill_db()" class="submit__button">Создать таблицу</button>
+                    <button onclick="update_db()" class="submit__button">Обновить таблицу</button>
+                    <button onclick="get_time()" class="submit__button">Обновить время в таблице</button>
+                    <button onclick="delete_db()" class="delete__button" >Удалить таблицу</button>
+                </form>
+            </div>
+
+            <h2>Работа с таблицей</h2>
+            <div class="db__work__table">
+                <form action="">
+                    <label for="choose_admin">Выбрать администратора(по айди в таблице сверху):</label>
+                    <input type="number" id="choose_admin" min="1" max="40" required><br>
+                    <label for="change_nick">Поменять ник выбранного администратора:</label>
+                    <input type="text" id="change_nick"><br>
+                    <label>Поменять ранг выбранного администратора:
+                    <input id="change_rank_input" list="change_rank" name="weeks"></label>
+                    <datalist id="change_rank">
+                        <script>change_rank()</script>
+                    </datalist>
+                    <br>
+                    <button onclick="change_admin()" class="submit__button">Внести изменения в таблице</button>
+                    <button onclick="delete_admin()" class="delete__button">Удалить администратора из таблицы</button> <br>
+                </form>
+            </div>
+            <h2>Работа с приложением</h2>
+            <div class="work__app">
+                <h3>Посмотреть количество часов выбранного администратора за определённый период</h3>
+
+                <form action="">
+                    <label for="choose_admin_2">Выбрать администратора(по айди в таблице сверху):</label>
+                    <input type="number" id="choose_admin_2" min="1" max="40"><br>
+                    <button onclick="check_time()" class="submit__button">Выбрать администратора</button>
+                    <h3>Даты с учтённым временем администратора</h3>
+                    <div id="no_admin_time"></div>
+                    <script>check_admin()</script>
+                    <script>check_admin_time()</script>
+                    <script>check_time_2()</script>
+                    <textarea id="admin_time" cols="30" rows="5" readonly></textarea>
+                    <br>
+                    <label for="date_1">Выбрать промежуток от(писать по примеру исходных значений)</label>
+                    <input id="date_1" type="text" value="2.5.2021" required>
+                    <label for="date_2">до</label>
+                    <input id="date_2" type="text" value="9.5.2021" required>
+                    <br>
+                    <script>admin_week_time_2()</script>
+                    <div id="admin_time_res"></div>
+                    <button onclick="admin_week_time()" class="submit__button">Просмотреть количество часов</button>
+                    </form>
+
+                <h3>Выдать отпуск выбранному администратору</h3>
+                <div id="present_vacation"></div>
+                <script>check_vacation()</script>
+                <label for="start_vacation">Выбрать промежуток от</label>
+                <input id="start_vacation" type="date">
+                <label for="end_vacation">до</label>
+                <input id="end_vacation" type="date">
+                <br>
+                <form action="" class="vacation__form">
+                    <button onclick="give_vacation()" class="submit__button">Выдать опуск</button>
+                    <button onclick="delete_vacation()" class="delete__button">Забрать отпуск</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+        </footer>
+    </main>
+</body>
+</html>

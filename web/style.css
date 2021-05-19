@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: #36393f;
+    font-family: Arial, sans-serif;
+    color: #b0bbba;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    background: #2f3136;
+}
+
+h2, h3 {
+    font-weight: normal;
+}
+
+li, a {
+    color: #b0bbba;
+}
+
+input{
+    background-color: #303339;
+    border: 1px solid #222428;
+    padding: 10px;
+    border-radius: 2px;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+}
+
+input:hover {
+    border: 1px solid #000000;
+}
+
+input, button {
+    margin: 1em 0;
+}
+
+button {
+    margin-right: 15px;
+}
+
+textarea {
+    resize: none;
+    background-color: #303339;
+    border: 1px solid #222428;
+    padding: 5px;
+    border-radius: 2px;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+}
+
+textarea:hover {
+    border: 1px solid #000000;
+}
+
+.submit__button {
+    padding: 10px 20px;
+    background-color: #7289da;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.submit__button:hover {
+    background-color: #6078DA;
+}
+
+.delete__button {
+    padding: 10px 20px;
+    background-color: #f04747;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.delete__button:hover {
+    background-color: #a42424;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.first__link {
+    padding: 20px 70px;
+}
+
+.second__link {
+    padding: 20px 80px;
+}
+
+.nav__links li a:hover {
+    background-color: #393C43;
+    color: #ffffff;
+}
+
+section {
+    margin: 20px;
+}
+
+.db__table {
+    padding: 25px 0;
+}
+
+#no_db {
+    margin-top: 1em;
+}
+
+.db__work__table {
+    padding: 15px 0;
+}
+
+#change_nick {
+    margin-left: 8px;
+}
+
+#choose_admin {
+    margin-left: 50px;
+}
+
+.work__app {
+    padding: 15px 0;
+}
+
+.work__app h3 {
+    margin: 12px 0;
+}
+
+#no_admin_time {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#date_1, #date_2, #start_vacation, #end_vacation {
+    margin: 1em 5px;
+}
+
+.excel__form {
+    padding: 25px 0;
+}
+
+.excel__form p {
+    margin-bottom: 1em;
+}

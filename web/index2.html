@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/jpg" href="img/icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="eel.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Staff hours</title>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="nav__links">
+                <ul>
+                    <li><a href="index.html" class="first__link">Таблица</a></li>
+                    <li><a href="#" class="second__link">Excel</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+
+            <h2>Настройка</h2>
+
+            <form class="excel__form">
+                <p>Создать таблицу за последнюю неделю</p>
+                <button onclick="create_excel()" class="submit__button">Создать excel-таблицу</button>
+                <br>
+                    <label>Создать таблицу за выбранный промежуток от
+                    <input id="date_list_input" list="date_list"></label>
+                    <datalist id="date_list">
+                        <script>date_list()</script>
+                    </datalist>
+                    <label>до
+                    <input id="date_list_input_2" list="date_list_2"></label>
+                    <datalist id="date_list_2">
+                    </datalist>
+                <br>
+                <button onclick="create_excel_2()" class="submit__button">Создать excel-таблицу</button>
+            </form>
+        </section>
+
+        <footer>
+        </footer>
+    </main>
+</body>
+</html>

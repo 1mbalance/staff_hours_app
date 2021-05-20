@@ -109,7 +109,7 @@ def check_db():
 @eel.expose
 def fill_db():
     if len(db.read()) == 0:
-        page = urlopen('https://desk.fastrp.ru/staff/')
+        page = urlopen('http://deskt.fastrp.ru/staff/')
         soup = BeautifulSoup(page, 'html.parser')
         tr_tags = soup.find_all('tr')
         array = []

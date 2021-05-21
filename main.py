@@ -109,7 +109,7 @@ def check_db():
 @eel.expose
 def fill_db():
     if len(db.read()) == 0:
-        page = urlopen('http://deskt.fastrp.ru/staff/')
+        page = urlopen('https://desk.fastrp.ru/staff/')
         soup = BeautifulSoup(page, 'html.parser')
         tr_tags = soup.find_all('tr')
         array = []
@@ -134,7 +134,7 @@ def fill_db():
 @eel.expose
 def update_db():
     if len(db.read()) > 0:
-        page = urlopen('http://deskt.fastrp.ru/staff/')
+        page = urlopen('https://desk.fastrp.ru/staff/')
         soup = BeautifulSoup(page, 'html.parser')
         tr_tags = soup.find_all('tr')
         staff_list = db.read()
@@ -168,7 +168,7 @@ def update_db():
 @eel.expose
 def get_time():
     if len(db.read()) > 0:
-        page = urlopen('http://deskt.fastrp.ru/staff/')
+        page = urlopen('https://desk.fastrp.ru/staff/')
         soup = BeautifulSoup(page, 'html.parser')
         tr_tags = soup.find_all('tr')
         staff_list = db.read()

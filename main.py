@@ -300,12 +300,13 @@ def admin_week_time_2():
 
 @eel.expose
 def check_vacation():
-    admin_id = int(db_app.read()[0][1]) - 1
-    if db.read()[admin_id][3] != '':
-        vacation = db.read()[admin_id][3]
-        start_vacation = vacation[:vacation.find('-')]
-        end_vacation = vacation[vacation.find('-') + 1:]
-        eel.get_vacation(start_vacation, end_vacation)
+    if len(db_app.read()) > 0:
+        admin_id = int(db_app.read()[0][1]) - 1
+        if db.read()[admin_id][3] != '':
+            vacation = db.read()[admin_id][3]
+            start_vacation = vacation[:vacation.find('-')]
+            end_vacation = vacation[vacation.find('-') + 1:]
+            eel.get_vacation(start_vacation, end_vacation)
 
 @eel.expose
 def give_vacation(start_vacation, end_vacation):

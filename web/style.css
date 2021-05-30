@@ -151,7 +151,7 @@ section {
     margin-bottom: 20px;
 }
 
-#date_1, #date_2, #start_vacation, #end_vacation {
+#date_1, #date_2, #start_vacation, #end_vacation, #date_list_input, #date_list_input_2 {
     margin: 1em 5px;
 }
 
